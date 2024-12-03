@@ -1,4 +1,4 @@
-import { join } from "jsr:@std/path/join";
+import {readFile} from "../../readFile.ts";
 
 import {
   allDescendingOrAscending,
@@ -8,16 +8,12 @@ import {
   stringArrayToNumberArray,
 } from "./util.ts";
 
-const scriptDir = new URL(".", import.meta.url).pathname;
-
-const filePath = join(scriptDir, "data.txt");
-
-const file = Deno.readTextFileSync(filePath);
+const dataFile = readFile("solutions/day_2/data.txt");
 
 export default function main() {
   let safeReports1 = 0;
   let safeReports2 = 0;
-  const lines = fetchLines(file);
+  const lines = fetchLines(dataFile);
   lines.forEach((line) => {
     const lineAsNumbers = stringArrayToNumberArray(line);
     const { isAscending, isDescending } = allDescendingOrAscending(

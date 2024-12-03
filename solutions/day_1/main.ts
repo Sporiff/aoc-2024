@@ -1,7 +1,7 @@
-import { readFile } from "../readFile.ts";
+import { readFile } from "../../readFile.ts";
 import { compareArrays, sortArray, sumArray } from "./util.ts";
 
-const dataFile = readFile("day_1/arrays.json");
+const dataFile = readFile("solutions/day_1/arrays.json");
 
 const { array1, array2 } = JSON.parse(dataFile);
 

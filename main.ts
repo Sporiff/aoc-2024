@@ -15,7 +15,7 @@ if (isNaN(Number(day))) {
 }
 
 const dayFolder = `day_${day}`;
-const dayModulePath = `./${dayFolder}/main.ts`;
+const dayModulePath = `./solutions/${dayFolder}/main.ts`;
 
 try {
   const module = await import(dayModulePath);

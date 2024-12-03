@@ -7,9 +7,9 @@ import {
   fetchLines,
   stringArrayToNumberArray,
 } from "../util.ts";
-import { readFile } from "../../readFile.ts";
+import { readFile } from "../../../readFile.ts";
 
-const testData = readFile("day_2/test/data.txt");
+const testData = readFile("solutions/day_2/test/data.txt");
 
 const fetchLinesTestOutcome = [
   "7 6 4 2 1",

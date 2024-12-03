@@ -1,6 +1,6 @@
 import { removeNegative, parseText, addArray } from "./util.ts";
 
-const data = Deno.readTextFileSync("day_3/data.txt");
+const data = Deno.readTextFileSync("solutions/day_3/data.txt");
 
 export default function main () {
     // Fetch the values for the uncleaned data

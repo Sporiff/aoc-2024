@@ -1,8 +1,8 @@
 import { assertEquals } from "jsr:@std/assert";
 import { compareArrays, sortArray, sumArray } from "../util.ts";
-import { readFile } from "../../readFile.ts";
+import { readFile } from "../../../readFile.ts";
 
-const dataFile = readFile("day_1/test/arrays.json");
+const dataFile = readFile("solutions/day_1/test/arrays.json");
 
 const { array1, array2 } = JSON.parse(dataFile);
 
