@@ -1,4 +1,4 @@
-import {readFile} from "../../readFile.ts";
+import { readFile } from "../../readFile.ts";
 
 import {
   allDescendingOrAscending,
