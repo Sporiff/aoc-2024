@@ -18,4 +18,4 @@ While efficiency isn't my main goal, I aim to spend some time refactoring each p
 
 ## Run the code
 
-You can run the code by running `deno task run --day={DAY}`, where `{DAY}` is the day you want to see results for. You can also run `deno task test` to run the test suite for all 
+You can run the code by running `deno task run --day={DAY}`, where `{DAY}` is the day you want to see results for. You can also run `deno task test` to run the test suite for all days. 
