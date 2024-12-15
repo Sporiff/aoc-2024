@@ -1,5 +1,10 @@
 import { assertEquals } from "jsr:@std/assert";
-import { returnNumberOfOccurrences, rearrangeVerticalLines, rearrangeDiagonalLines, findXmas } from "../util.ts";
+import {
+  findXmas,
+  rearrangeDiagonalLines,
+  rearrangeVerticalLines,
+  returnNumberOfOccurrences,
+} from "../util.ts";
 
 const testData = `MMMSXXMASM
 MSAMXMSMSA
@@ -10,7 +15,7 @@ XXAMMXXAMA
 SMSMSASXSS
 SAXAMASAAA
 MAMMMXMMMM
-MXMXAXMASX`
+MXMXAXMASX`;
 
 const rearrangedVerticalLines = `MMAMXXSSMM
 MSMSMXMAAX
@@ -21,7 +26,7 @@ XMMSMXAAXX
 MSAMXXSSMM
 AMASAAXAMA
 SSMMMMSAMS
-MAMXMASAMX`
+MAMXMASAMX`;
 
 const rearrangedDiagonalLines = `MSXMAXSAMX
 MASAMXXAM
@@ -60,28 +65,28 @@ ASAMX
 SAMM
 AMA
 MS
-X`
+X`;
 
 Deno.test(function returnNumberOfOccurrencesTest() {
-    assertEquals(returnNumberOfOccurrences(testData), 5);
-})
+  assertEquals(returnNumberOfOccurrences(testData), 5);
+});
 
 Deno.test(function rearrangeVerticalLinesTest() {
-    assertEquals(rearrangeVerticalLines(testData), rearrangedVerticalLines);
-})
+  assertEquals(rearrangeVerticalLines(testData), rearrangedVerticalLines);
+});
 
 Deno.test(function rearrangeDiagonalLinesTest() {
-    assertEquals(rearrangeDiagonalLines(testData), rearrangedDiagonalLines);
-})
+  assertEquals(rearrangeDiagonalLines(testData), rearrangedDiagonalLines);
+});
 
 Deno.test(function findXMasTest() {
-    assertEquals(findXmas(testData), 9);
-})
+  assertEquals(findXmas(testData), 9);
+});
 
 Deno.test(function countAllTest() {
-    const string = testData;
-    const verticalLines = rearrangeVerticalLines(string);
-    const diagonalLines = rearrangeDiagonalLines(string);
-    const fullString = `${string}\n${verticalLines}\n${diagonalLines}`;
-    assertEquals(returnNumberOfOccurrences(fullString), 18);
-})
+  const string = testData;
+  const verticalLines = rearrangeVerticalLines(string);
+  const diagonalLines = rearrangeDiagonalLines(string);
+  const fullString = `${string}\n${verticalLines}\n${diagonalLines}`;
+  assertEquals(returnNumberOfOccurrences(fullString), 18);
+});
